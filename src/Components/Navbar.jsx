@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -12,24 +13,24 @@ function Navbar() {
         {/* Navigation Links */}
         <ul className="flex space-x-4">
           <li>
-            <a href="#home" className="text-white">
+            <Link to="/" className="text-white">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" className="text-white">
+            <Link to="about" className="text-white">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#products" className="text-white">
+            <Link to="products" className="text-white">
               Products
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="text-white">
+            <Link to="contact" className="text-white">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
