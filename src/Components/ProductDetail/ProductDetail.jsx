@@ -16,10 +16,10 @@ const ProductDetail = () => {
   }, [productId]);
 
   return (
-    <div className="product ">
+    <div className="product max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
       {isProductDetailsloaded ? (
         <>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ">
             <img src={productDetails?.image} alt="" />
           </div>
           <div className="product-info text-center">
