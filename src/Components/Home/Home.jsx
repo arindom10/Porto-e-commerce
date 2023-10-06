@@ -1,10 +1,12 @@
 import React from "react";
+import HomePage from "../HomePage/HomePage";
 import Products from "../Products";
 
 const Home = () => {
   return (
     <div>
-      <Products></Products>
+      <HomePage />
+      <Products />
     </div>
   );
 };

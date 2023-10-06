@@ -16,7 +16,7 @@ const ProductDetail = () => {
   }, [productId]);
 
   return (
-    <div className="product max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
+    <div className=" product max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
       {isProductDetailsloaded ? (
         <>
           <div className="flex items-center justify-center ">

@@ -12,7 +12,10 @@ function Navbar() {
     <nav className="bg-slate-800 p-4 mb-7">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-white text-xl font-semibold">
+        <Link
+          to="/"
+          className="text-white text-xl font-semibold hover:text-amber-600"
+        >
           SHOPPING CART
         </Link>
 
@@ -29,22 +32,22 @@ function Navbar() {
           }`}
         >
           <li>
-            <Link to="/" className="text-white">
+            <Link to="/" className="text-white hover:text-amber-400">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="text-white">
+            <Link to="/about" className="text-white hover:text-amber-400">
               About
             </Link>
           </li>
           <li>
-            <Link to="/products" className="text-white">
+            <Link to="/products" className="text-white hover:text-amber-400">
               Products
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white">
+            <Link to="/contact" className="text-white hover:text-amber-400">
               Contact
             </Link>
           </li>

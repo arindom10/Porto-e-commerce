@@ -6,7 +6,7 @@ const Product = (props) => {
   console.log(props);
   const { id, image, title, price, rating } = props.product;
   return (
-    <div className="product ">
+    <div className="container product mt-9 ">
       <div className="w-full px-2 ">
         <div className="flex items-center justify-center ">
           <img src={image} alt="" />
