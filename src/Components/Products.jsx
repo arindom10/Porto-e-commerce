@@ -24,6 +24,9 @@ const Products = () => {
   };
   return (
     <div className="container mx-auto">
+      <h1 className="text-center text-3xl hover:text-amber-500 mt-6">
+        !!Feature Products!!
+      </h1>
       {isProductsLoaded ? (
         <>
           {products.length ? (
