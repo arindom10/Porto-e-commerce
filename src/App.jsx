@@ -1,11 +1,12 @@
+import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import ProductCart from "./Components/Products";
-import Main from "./Components/Layouts/Main";
-import ProductDetail from "./Components/ProductDetail/ProductDetail";
-import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import Home from "./Components/Home/Home";
+import Main from "./Components/Layouts/Main";
+import ProductDetail from "./Components/ProductDetail/ProductDetail";
+import ProductCart from "./Components/Products";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,6 +28,7 @@ function App() {
       ],
     },
   ]);
+
   return (
     <div>
       <RouterProvider router={router}></RouterProvider>

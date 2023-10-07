@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import StarRatings from "react-star-ratings";
 
 const ProductDetail = () => {
   const productId = useLoaderData();
@@ -19,13 +20,52 @@ const ProductDetail = () => {
     <div className=" product max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
       {isProductDetailsloaded ? (
         <>
-          <div className="flex items-center justify-center ">
-            <img src={productDetails?.image} alt="" />
-          </div>
-          <div className="product-info text-center">
-            <h2 className="text-sm">Products: {productDetails?.title}</h2>
-            <h4>Price: {productDetails?.price}</h4>
-            <p>Rating: {productDetails?.rating.rate}</p>
+          <div className="flex flex-col md:flex-row mx-auto">
+            {/* Image Section */}
+            <div className="w-full md:w-1/2 p-4 order-2 md:order-1">
+              <img src={productDetails?.image} alt="" className="mx-auto" />
+            </div>
+
+            {/* Product Information Section */}
+            <div className="w-full md:w-1/2 p-4 order-1 md:order-2">
+              <div className="product-info text-center">
+                <h2 className="text-sm font-extrabold">
+                  {productDetails?.title}
+                </h2>
+                <h4>
+                  <small className="font-bold">Price:</small>{" "}
+                  {productDetails?.price}
+                </h4>
+                <h4>
+                  <small className="font-bold">Category:</small>
+                  {productDetails?.category}
+                </h4>
+                <p>
+                  <small className="font-bold">Description:</small>
+                  {productDetails?.description}
+                </p>
+                <div className="mt-4">
+                  <StarRatings
+                    rating={productDetails?.rating.rate}
+                    starDimension="30px"
+                    starRatedColor="gold"
+                    starEmptyColor="gray"
+                    numberOfStars={5}
+                    name="rating"
+                  />
+                </div>
+
+                {/* Button Section */}
+                <div className="flex justify-between mt-4">
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Buy Now
+                  </button>
+                  <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </>
       ) : (

@@ -13,7 +13,7 @@ const Product = (props) => {
         </div>
         <div className="product-info text-center">
           <h2 className="text-sm">Products: {title}</h2>
-          <h4>Price: {price}</h4>
+          <h4>Price: {price}$</h4>
           <p>Rating: {rating.rate}</p>
           <Link
             to={`/product/${id}`}
