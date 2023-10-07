@@ -17,7 +17,7 @@ const ProductDetail = () => {
   }, [productId]);
 
   return (
-    <div className=" product max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl ">
+    <div className=" container product  mx-auto bg-white rounded-xl shadow-md overflow-hidden  ">
       {isProductDetailsloaded ? (
         <>
           <div className="flex flex-col md:flex-row mx-auto">
@@ -27,24 +27,24 @@ const ProductDetail = () => {
             </div>
 
             {/* Product Information Section */}
-            <div className="w-full md:w-1/2 p-4 order-1 md:order-2">
-              <div className="product-info text-center">
-                <h2 className="text-sm font-extrabold">
+            <div className="w-full md:w-1/2 p-4 order-1 md:order-2 text-left">
+              <div className="product-info ">
+                <h2 className="text-sm font-extrabold ">
                   {productDetails?.title}
                 </h2>
-                <h4>
+                <h4 className="">
                   <small className="font-bold">Price:</small>{" "}
                   {productDetails?.price}
                 </h4>
-                <h4>
+                <h4 className="">
                   <small className="font-bold">Category:</small>
                   {productDetails?.category}
                 </h4>
-                <p>
+                <p className="">
                   <small className="font-bold">Description:</small>
                   {productDetails?.description}
                 </p>
-                <div className="mt-4">
+                <div className="mt-4 ">
                   <StarRatings
                     rating={productDetails?.rating.rate}
                     starDimension="30px"
@@ -56,11 +56,11 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Button Section */}
-                <div className="flex justify-between mt-4">
+                <div className="flex  mt-4">
                   <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Buy Now
                   </button>
-                  <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                  <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-2">
                     Add to Cart
                   </button>
                 </div>

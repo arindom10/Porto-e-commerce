@@ -25,14 +25,13 @@ const ProductCategory = ({ category }) => {
               alt={product.title}
               className="w-full h-40  mb-2"
             />
-            <h3 className="text-lg font-semibold">{product.title}</h3>
-            <p className="text-gray-500">Price: {product.price}$</p>
             <Link
               to={`/product/${product.id}`}
-              className="border-x-5 rounded-md bg-slate-800 text-white hover:text-amber-500 "
+              className="text-lg font-semibold"
             >
-              Details
+              {product.title}
             </Link>
+            <p className="text-gray-500">Price: {product.price}$</p>
           </div>
         ))}
       </div>

@@ -12,15 +12,17 @@ const Product = (props) => {
           <img src={image} alt="" />
         </div>
         <div className="product-info text-center">
-          <h2 className="text-sm">Products: {title}</h2>
+          <Link to={`/product/${id}`} className="text-sm ">
+            Products: {title}
+          </Link>
           <h4>Price: {price}$</h4>
           <p>Rating: {rating.rate}</p>
-          <Link
+          {/* <Link
             to={`/product/${id}`}
             className="border-x-5 rounded-md bg-slate-800 text-white hover:text-amber-500"
           >
             Details
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
